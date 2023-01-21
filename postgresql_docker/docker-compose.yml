@@ -39,6 +39,7 @@ networks:
   
 #Configuracao do host no pgadmin
 #host: host.docker.internal
-#dentro do wsl2 digitar hostname -I  172.17.0.1 
+#dentro do wsl2 digitar hostname -I | cut -f 1 -d ' '
+#pegar localhost 
 #usuario: postgres
 #http://localhost:8089/browser/

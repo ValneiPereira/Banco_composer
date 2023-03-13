@@ -1,0 +1,21 @@
+version: '3'
+services:
+  BANCO_VALNEI_MYSQL:  
+    image: mysql
+    container_name: BANCO_MYSQL
+    restart: always    
+    ports:      
+      - '3306:3306'
+    environment:
+      MYSQL_DATABASE: 'db'      
+      MYSQL_USER: 'user'      
+      MYSQL_PASSWORD: 'password'      
+      MYSQL_ROOT_PASSWORD: 'password'
+    networks:
+      - valnei-net          
+    volumes:
+      - mysqldb:/var/lib/mysql
+volumes:
+  mysqldb:
+networks:
+  valnei-net:

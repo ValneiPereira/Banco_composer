@@ -1,7 +1,7 @@
 version: '3'
 services:
   BANCO_VALNEI_MYSQL:  
-    image: mysql
+    image: mysql:8.0
     container_name: BANCO_MYSQL
     restart: always    
     ports:      
@@ -15,6 +15,7 @@ services:
       - valnei-net          
     volumes:
       - mysqldb:/var/lib/mysql
+    user: "1000:1000"
 volumes:
   mysqldb:
 networks:
